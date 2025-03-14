@@ -1,0 +1,25 @@
+
+1. Выбрать: Все книги по Психологии. 
+    SELECT * FROM Authors WHERE Genre = 'Фантастика';
+
+2. Выбрать: Все книги авторов из города Москва. 
+    SELECT * FROM Authors WHERE City = 'Москва';
+
+3. Выбрать: Сумму страниц всех книг в таблице. 
+    SELECT SUM(PageCount) AS TotalPages FROM Authors;
+
+4. Выбрать: Количество книг, год издания которых > 2000. 
+    SELECT COUNT(*) AS BooksAfter2000 FROM Authors WHERE ReleaseYear > 2000;
+
+5. Заменить: Имя одного из авторов. 
+    UPDATE Authors SET AuthorName = 'Хемингуэй' WHERE AuthorName = 'Эрнест Хемингуэй';
+
+6. Вставить: новую строку в таблицу. 
+    INSERT INTO Authors (AuthorName, City, Genre, Title, ReleaseYear, PageCount, SoldCopies) 
+    VALUES ('Фёдор Достоевский', 'Москва', 'Классика', 'Преступление и наказание', 1866, 670, 800000);
+
+7. Удалить: строку из таблицы, где Id автора = 3. 
+    UPDATE Authors SET Genre = 'Психология' WHERE Id = 3;
+    DELETE FROM Authors WHERE Id = 3;
+
+ 

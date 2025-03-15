@@ -56,7 +56,7 @@ ROOT_URLCONF = 'movies.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'Templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -120,8 +120,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 
-#MEDIA_URL = '/media/'
-#MEDIA_ROOT = "/home/aquila/Study/Прога/python/DPO/Django_project/media"
+MEDIA_URL = '/media/'
+#MEDIA_ROOT = os.path.join(BASE_DIR.parent, 'media')
+MEDIA_ROOT = BASE_DIR.parent / 'media'
 
 
 # Default primary key field type
